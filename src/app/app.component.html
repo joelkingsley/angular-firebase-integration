@@ -18,4 +18,14 @@
   </li>
 </ul>
 
+<div *ngFor="let train of trains">
+  <div>From: {{train.from}}</div>
+  <div>To: {{train.to}}</div>
+  <div><strong>Compartments:</strong></div>
+  <div *ngFor="let compartment of train.compartments">
+    <div>Kit ID: {{compartment.kitId}}</div>
+    <div>Type: {{compartment.type}}</div>
+  </div>
+</div>
+
 <router-outlet></router-outlet>
